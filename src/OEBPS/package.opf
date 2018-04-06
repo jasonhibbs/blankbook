@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package 
+	xmlns="http://www.idpf.org/2007/opf"
+	prefix="rendition: http://www.idpf.org/vocab/rendition/#"
+	version="3.0" xml:lang="en"
+	unique-identifier="uid" >
+
+
+<!-- METADATA	(?) http://idpf.org/epub/30/spec/epub30-publications.html#sec-metadata-elem -->
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">	<!--  -->
+		
+		<!-- About the Book -->
+		<dc:title id="en_title" xml:lang="en">Blank Book</dc:title>		
+		<dc:description id="en_description" xml:lang="en">v1.00 - A 3.0 standard, Fixed-Layout, Read Aloud ePUB containing all the stuff I wished somebody had put in one place for me to learn faster, and quicker. It may not be perfect, by the way. Tested only in Apple iBooks.</dc:description>
+		
+		<!-- Contributors -->
+		<dc:creator id="creator">Jason Hibbs</dc:creator>	<!-- (?) http://idpf.org/epub/30/spec/epub30-publications.html#sec-opf-dccreator -->
+		<meta refines="#creator" property="file-as">Hibbs, Jason</meta>
+		<meta refines="#creator" property="role" scheme="marc:relators">aut</meta>
+		
+		<!-- Publication -->
+		<dc:publisher id="en_publisher" xml:lang="en">Jason Hibbs</dc:publisher>
+		<dc:date>2012-05-28</dc:date>
+		<dc:language>en</dc:language>
+		
+		<meta property="dcterms:modified">2012-05-29T23:59:59Z</meta> <!-- I think this helps with updates, basically -->
+		
+		<!-- Unique ID, e.g. ISBN, or generate a UUID here: http://www.itu.int/ITU-T/asn1/uuid.html -->
+		<dc:identifier id="uid">MUST_BE_UNIQUE_blankbook</dc:identifier>
+		
+		
+		<!-- License -->
+		<dc:rights id="en_rights" xml:lang="en">This work is licensed under a Creative Commons Attribution-ShareAlike (CC BY-SA) 3.0 Unported License.</dc:rights>
+
+		<!-- Cover Image -->
+		<meta name="cover" content="coverimage" />
+		
+		<!-- ePUB 3.0 Renditions and Media Overlays -->
+		<meta property="rendition:layout">pre-paginated</meta>	<!-- (?) http://idpf.org/epub/fxl/#property-defs -->
+		<meta property="rendition:layout">landscape</meta>
+		<meta property="rendition:spread">landscape</meta>
+		
+		<meta property="media:duration" refines="#p02smil">0:00:04.600</meta>
+    <meta property="media:duration" refines="#p03smil">0:00:04.900</meta>
+    <meta property="media:duration" refines="#p05smil">0:00:04.675</meta>
+    <meta property="media:duration">0:00:14.175</meta>
+    <meta property="media:narrator">Jason Hibbs</meta>
+    <meta property="media:active-class">-epub-media-overlay-active</meta>
+	</metadata>
+	
+	
+<!-- MANIFEST	(?) http://idpf.org/epub/30/spec/epub30-publications.html#sec-manifest-elem -->		
+	<manifest>
+	
+		<!-- Table of Contents -->
+		<item id="toc" href="toc.xhtml" properties="nav" media-type="application/xhtml+xml"/>
+		    
+		<!-- CSS -->
+		<item id="css" href="css/style.css" media-type="text/css"/>
+	
+		<!-- xHTML -->
+		<item id="cover" media-type="application/xhtml+xml" href="cover.xhtml"/>
+		<item id="p01" media-type="application/xhtml+xml" href="p01.xhtml"/>
+		<item id="p02" media-type="application/xhtml+xml" href="p02.xhtml" media-overlay="p02smil"/>
+		<item id="p03" media-type="application/xhtml+xml" href="p03.xhtml" media-overlay="p03smil"/>
+		<item id="p04" media-type="application/xhtml+xml" href="p04.xhtml"/>
+		<item id="p05" media-type="application/xhtml+xml" href="p05.xhtml" media-overlay="p05smil"/>
+	
+		<!-- Images -->
+		<item id="coverimage" href="images/book_cover.jpg" media-type="image/jpeg"/>
+		<item id="img01" href="images/img_p01.jpg" media-type="image/jpeg"/>
+		<item id="img02" href="images/img_p02.jpg" media-type="image/jpeg"/>
+		<item id="img03" href="images/img_p03.jpg" media-type="image/jpeg"/>
+		<item id="img04" href="images/img_p04.jpg" media-type="image/jpeg"/>
+		<item id="img05" href="images/img_p05.jpg" media-type="image/jpeg"/>
+	
+		<!--Audio-->
+	  <item id="audio_file" href="audio/book_audio.m4a" media-type="audio/mpeg"/>
+	  
+		<!--Smil-->
+		<item id="p02smil"	href="smil/p02.smil" media-type="application/smil+xml"/>
+		<item id="p03smil"	href="smil/p03.smil" media-type="application/smil+xml"/>
+		<item id="p05smil"	href="smil/p05.smil" media-type="application/smil+xml"/>
+		
+		<!--iTunes-->
+		<item id="itunesmeta" href="../iTunesMetadata.plist" media-type="application/xml"/> <!-- A lot of people moan about this, get over it, just declare it -->
+		
+	</manifest>
+
+	
+<!-- SPINE (?) http://idpf.org/epub/30/spec/epub30-publications.html#sec-spine-elem -->	
+	<spine page-progression-direction="ltr">
+		<itemref idref="cover"/>
+		<itemref idref="p01" linear="yes"/>
+		<itemref idref="p02" linear="yes"/>
+		<itemref idref="p03" linear="yes"/>
+		<itemref idref="p04" linear="yes"/>
+		<itemref idref="p05" linear="yes"/>
+	</spine>
+
+</package>
