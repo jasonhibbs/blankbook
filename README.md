@@ -1,6 +1,6 @@
 # [Blank Book](http://jasonhibbs.co.uk/work/blank-book)
 
-A fixed-layout ePub3 template for picture book makers.
+A fixed layout ePub 3 template for picture book makers.
 
 ## Usage
 
