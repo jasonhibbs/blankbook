@@ -1,101 +1,141 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<package 
-	xmlns="http://www.idpf.org/2007/opf"
-	prefix="rendition: http://www.idpf.org/vocab/rendition/#"
-	version="3.0" xml:lang="en"
-	unique-identifier="uid" >
+<?xml version="1.0" encoding="utf-8"?>
+<package xml:lang="en"
+  xmlns="http://www.idpf.org/2007/opf"
+  prefix="rendition: http://www.idpf.org/vocab/rendition/#"
+  version="3.0"
+  unique-identifier="uid">
 
+  <!-- Metadata -->
+  <!-- http://idpf.org/epub/30/spec/epub30-publications.html#sec-metadata-elem -->
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
 
-<!-- METADATA	(?) http://idpf.org/epub/30/spec/epub30-publications.html#sec-metadata-elem -->
-	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">	<!--  -->
-		
-		<!-- About the Book -->
-		<dc:title id="en_title" xml:lang="en">Blank Book</dc:title>		
-		<dc:description id="en_description" xml:lang="en">v1.00 - A 3.0 standard, Fixed-Layout, Read Aloud ePUB containing all the stuff I wished somebody had put in one place for me to learn faster, and quicker. It may not be perfect, by the way. Tested only in Apple iBooks.</dc:description>
-		
-		<!-- Contributors -->
-		<dc:creator id="creator">Jason Hibbs</dc:creator>	<!-- (?) http://idpf.org/epub/30/spec/epub30-publications.html#sec-opf-dccreator -->
-		<meta refines="#creator" property="file-as">Hibbs, Jason</meta>
-		<meta refines="#creator" property="role" scheme="marc:relators">aut</meta>
-		
-		<!-- Publication -->
-		<dc:publisher id="en_publisher" xml:lang="en">Jason Hibbs</dc:publisher>
-		<dc:date>2012-05-28</dc:date>
-		<dc:language>en</dc:language>
-		
-		<meta property="dcterms:modified">2012-05-29T23:59:59Z</meta> <!-- I think this helps with updates, basically -->
-		
-		<!-- Unique ID, e.g. ISBN, or generate a UUID here: http://www.itu.int/ITU-T/asn1/uuid.html -->
-		<dc:identifier id="uid">MUST_BE_UNIQUE_blankbook</dc:identifier>
-		
-		
-		<!-- License -->
-		<dc:rights id="en_rights" xml:lang="en">This work is licensed under a Creative Commons Attribution-ShareAlike (CC BY-SA) 3.0 Unported License.</dc:rights>
+    <!-- About the Book -->
+    <dc:title id="en_title" xml:lang="en">Blank Book</dc:title>
+    <dc:description id="en_description" xml:lang="en">A fixed-layout ePub3 template for picture book makers.</dc:description>
 
-		<!-- Cover Image -->
-		<meta name="cover" content="coverimage" />
-		
-		<!-- ePUB 3.0 Renditions and Media Overlays -->
-		<meta property="rendition:layout">pre-paginated</meta>	<!-- (?) http://idpf.org/epub/fxl/#property-defs -->
-		<meta property="rendition:layout">landscape</meta>
-		<meta property="rendition:spread">landscape</meta>
-		
-		<meta property="media:duration" refines="#p02smil">0:00:04.600</meta>
-    <meta property="media:duration" refines="#p03smil">0:00:04.900</meta>
-    <meta property="media:duration" refines="#p05smil">0:00:04.675</meta>
-    <meta property="media:duration">0:00:14.175</meta>
-    <meta property="media:narrator">Jason Hibbs</meta>
+    <!-- Creators -->
+    <!-- http://idpf.org/epub/30/spec/epub30-publications.html#sec-opf-dccreator -->
+    <dc:creator id="creator">Jason Hibbs</dc:creator>
+    <meta refines="#creator" property="file-as">Hibbs, Jason</meta>
+
+    <!-- Contributors -->
+    <!-- Leave me in as a provider, if you want: https://www.loc.gov/marc/relators/relaterm.html -->
+    <dc:contributor id="provider">Jason Hibbs</dc:contributor>
+    <meta refines="#provider" property="file-as">Hibbs, Jason</meta>
+    <meta refines="#provider" property="role" scheme="marc:relators">prv</meta>
+
+    <!-- Publication -->
+    <dc:publisher id="en_publisher" xml:lang="en">Jason Hibbs</dc:publisher>
+    <dc:date>2018-04-08</dc:date>
+    <dc:language>en</dc:language>
+
+    <!-- This must help with releaseing updates -->
+    <meta property="dcterms:modified">2018-04-08T00:00:00Z</meta>
+
+    <!-- Unique ID, e.g. ISBN, or generate a UUID here: https://www.uuidgenerator.net/ -->
+    <dc:identifier id="uid">the-one-and-only-blankbook</dc:identifier>
+
+    <!-- License -->
+    <dc:rights id="rights_en" xml:lang="en">MIT Licence</dc:rights>
+
+    <!-- Cover Image -->
+    <meta name="cover" content="img_cover_thumb"/>
+
+    <!-- ePub Renditions -->
+    <!-- http://idpf.org/epub/fxl/#property-defs -->
+    <meta property="rendition:layout">pre-paginated</meta>
+    <meta property="rendition:spread">landscape</meta>
+    <meta property="rendition:orientation">landscape</meta>
+
+    <!-- Media Overlays -->
+    <!-- TODO -->
     <meta property="media:active-class">-epub-media-overlay-active</meta>
-	</metadata>
-	
-	
-<!-- MANIFEST	(?) http://idpf.org/epub/30/spec/epub30-publications.html#sec-manifest-elem -->		
-	<manifest>
-	
-		<!-- Table of Contents -->
-		<item id="toc" href="toc.xhtml" properties="nav" media-type="application/xhtml+xml"/>
-		    
-		<!-- CSS -->
-		<item id="css" href="css/style.css" media-type="text/css"/>
-	
-		<!-- xHTML -->
-		<item id="cover" media-type="application/xhtml+xml" href="cover.xhtml"/>
-		<item id="p01" media-type="application/xhtml+xml" href="p01.xhtml"/>
-		<item id="p02" media-type="application/xhtml+xml" href="p02.xhtml" media-overlay="p02smil"/>
-		<item id="p03" media-type="application/xhtml+xml" href="p03.xhtml" media-overlay="p03smil"/>
-		<item id="p04" media-type="application/xhtml+xml" href="p04.xhtml"/>
-		<item id="p05" media-type="application/xhtml+xml" href="p05.xhtml" media-overlay="p05smil"/>
-	
-		<!-- Images -->
-		<item id="coverimage" href="images/book_cover.jpg" media-type="image/jpeg"/>
-		<item id="img01" href="images/img_p01.jpg" media-type="image/jpeg"/>
-		<item id="img02" href="images/img_p02.jpg" media-type="image/jpeg"/>
-		<item id="img03" href="images/img_p03.jpg" media-type="image/jpeg"/>
-		<item id="img04" href="images/img_p04.jpg" media-type="image/jpeg"/>
-		<item id="img05" href="images/img_p05.jpg" media-type="image/jpeg"/>
-	
-		<!--Audio-->
-	  <item id="audio_file" href="audio/book_audio.m4a" media-type="audio/mpeg"/>
-	  
-		<!--Smil-->
-		<item id="p02smil"	href="smil/p02.smil" media-type="application/smil+xml"/>
-		<item id="p03smil"	href="smil/p03.smil" media-type="application/smil+xml"/>
-		<item id="p05smil"	href="smil/p05.smil" media-type="application/smil+xml"/>
-		
-		<!--iTunes-->
-		<item id="itunesmeta" href="../iTunesMetadata.plist" media-type="application/xml"/> <!-- A lot of people moan about this, get over it, just declare it -->
-		
-	</manifest>
+    <meta property="media:duration">0:00:00.000</meta>
+    <meta property="media:duration" refines="#smil_title">0:00:00.000</meta>
+    <meta property="media:duration" refines="#smil_01_left">0:00:00.000</meta>
+    <meta property="media:narrator">Jason Hibbs</meta>
 
-	
-<!-- SPINE (?) http://idpf.org/epub/30/spec/epub30-publications.html#sec-spine-elem -->	
-	<spine page-progression-direction="ltr">
-		<itemref idref="cover"/>
-		<itemref idref="p01" linear="yes"/>
-		<itemref idref="p02" linear="yes"/>
-		<itemref idref="p03" linear="yes"/>
-		<itemref idref="p04" linear="yes"/>
-		<itemref idref="p05" linear="yes"/>
-	</spine>
+  </metadata>
+
+
+  <!-- Manifest -->
+  <!-- http://idpf.org/epub/30/spec/epub30-publications.html#sec-manifest-elem -->
+  <manifest>
+
+    <!-- Table of Contents -->
+    <item id="toc" media-type="application/xhtml+xml" properties="nav" href="toc.xhtml"/>
+
+    <!-- CSS -->
+    <item id="css" href="assets/css/style.css" media-type="text/css"/>
+
+    <!-- xHTML -->
+    <item id="cover_front"           media-type="application/xhtml+xml" href="covers/front.xhtml"/>
+    <item id="endpapers_front_left"  media-type="application/xhtml+xml" href="endpapers/front_left.xhtml"/>
+    <item id="endpapers_front_right" media-type="application/xhtml+xml" href="endpapers/front_right.xhtml"/>
+    <item id="frontmatter_colophon"  media-type="application/xhtml+xml" href="frontmatter/colophon.xhtml"/>
+    <item id="frontmatter_title"     media-type="application/xhtml+xml" href="frontmatter/title.xhtml" media-overlay="smil_title"/>
+
+    <item id="spread_01_left"        media-type="application/xhtml+xml" href="spreads/01_left.xhtml" media-overlay="smil_01_left"/>
+    <item id="spread_01_right"       media-type="application/xhtml+xml" href="spreads/01_right.xhtml"/>
+    <!-- <item id="02_left"               media-type="application/xhtml+xml" href="spreads/02_left.xhtml"  /> -->
+    <!-- <item id="02_right"              media-type="application/xhtml+xml" href="spreads/02_right.xhtml"/> -->
+
+    <item id="endpapers_back_left"   media-type="application/xhtml+xml" href="endpapers/back_left.xhtml"/>
+    <item id="endpapers_back_right"  media-type="application/xhtml+xml" href="endpapers/back_right.xhtml"/>
+    <item id="cover_back"            media-type="application/xhtml+xml" href="covers/back.xhtml"/>
+
+    <!-- Images -->
+    <!-- iBooks rejects images with more than 4,000,000 pixels, https://help.apple.com/itc/booksassetguide/en.lproj/static.html#itc258e584c2 -->
+    <item id="img_cover_thumb"       media-type="image/png"  href="assets/images/cover_thumb.png"/>
+    <item id="img_cover_front"       media-type="image/png"  href="assets/images/cover_front.png"/>
+    <item id="img_cover_back"        media-type="image/png"  href="assets/images/cover_back.png"/>
+    <item id="img_endpapers_front"   media-type="image/jpeg" href="assets/images/endpapers_front.jpg"/>
+    <item id="img_endpapers_back"    media-type="image/jpeg" href="assets/images/endpapers_back.jpg"/>
+    <item id="img_frontmatter"       media-type="image/png"  href="assets/images/frontmatter.png"/>
+    <item id="img_spread_01"         media-type="image/png"  href="assets/images/spread_01.png"/>
+    <!-- <item id="img_spread_02"         media-type="image/jpeg" href="assets/images/spread_02.jpg"/> -->
+
+    <!-- Fonts -->
+    <item id="font_karla-regular_woff"  media-type="application/font-woff" href="assets/fonts/karla-regular.woff"/>
+    <item id="font_karla-700_woff"      media-type="application/font-woff" href="assets/fonts/karla-700.woff"/>
+    <item id="font_karla-regular_woff2" media-type="font/woff2" href="assets/fonts/karla-regular.woff2"/>
+    <item id="font_karla-700_woff2"     media-type="font/woff2" href="assets/fonts/karla-700.woff2"/>
+    <item id="font_karla-regular_ttf"   media-type="application/vnd.ms-opentype" href="assets/fonts/karla-regular.ttf"/>
+    <item id="font_karla-700_ttf"       media-type="application/vnd.ms-opentype" href="assets/fonts/karla-700.ttf"/>
+
+    <!--Audio-->
+    <item id="audio_text"   media-type="audio/mpeg" href="assets/audio/text.m4a"/>
+
+    <!--Smil-->
+    <item id="smil_title"   media-type="application/smil+xml" href="assets/smil/title.smil"/>
+    <item id="smil_01_left" media-type="application/smil+xml" href="assets/smil/spread_01_left.smil"/>
+
+    <!--iTunes-->
+    <!-- Better to declare this -->
+    <item id="itunesmeta" href="../iTunesMetadata.plist" media-type="application/xml"/>
+
+  </manifest>
+
+  <!-- Spine -->
+  <!-- http://idpf.org/epub/30/spec/epub30-publications.html#sec-spine-elem -->
+  <spine page-progression-direction="ltr">
+    <itemref idref="cover_front"/>
+    <itemref idref="endpapers_front_left"  linear="yes"/>
+    <itemref idref="endpapers_front_right" linear="yes"/>
+    <itemref idref="frontmatter_colophon"  linear="yes"/>
+    <itemref idref="frontmatter_title"     linear="yes"/>
+    <itemref idref="spread_01_left"        linear="yes"/>
+    <itemref idref="spread_01_right"       linear="yes"/>
+    <!-- <itemref idref="spread_02_left"        linear="yes"/> -->
+    <!-- <itemref idref="spread_02_right"       linear="yes"/> -->
+    <itemref idref="endpapers_back_left"   linear="yes"/>
+    <itemref idref="endpapers_back_right"  linear="yes"/>
+    <itemref idref="cover_back"            linear="yes"/>
+  </spine>
+
+  <!-- Guide -->
+  <guide>
+    <reference type="cover" title="Cover Image" href="covers/front.xhtml"></reference>
+  </guide>
 
 </package>

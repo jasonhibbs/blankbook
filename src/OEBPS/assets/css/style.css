@@ -1,0 +1,166 @@
+/* General //////////////////////////////////////////////////////*/
+
+/* Embedded fonts */
+@font-face {
+  font-family: 'Karla';
+  src: url('../fonts/karla-regular.woff2') format('woff2'),
+  		 url('../fonts/karla-regular.woff' ) format('woff'),
+       url('../fonts/karla-regular.ttf'  ) format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url('../fonts/karla-700.woff2') format('woff2'),
+  		 url('../fonts/karla-700.woff' ) format('woff'),
+       url('../fonts/karla-700.ttf'  ) format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Reset any eBook reader styles */
+html, body, div,
+img, p, a,
+h1, h2, h3,
+ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, p {
+	font-size: inherit;
+	font-weight: normal;
+	line-height: inherit;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+body {
+	/* This matches your viewport */
+	position: relative;
+	width: 1000px;
+	height: 1000px;
+	/*overflow: hidden;*/
+
+	/* Global font style */
+	font-family: 'Karla', Helvetica, Arial, sans-serif;
+	font-size: 48px;
+	line-height: 1.5;
+	color: #222;
+
+	/* Global page style */
+	background: white;
+}
+
+a {
+	color: #44f;
+	text-decoration: none;
+	border-bottom: 1px solid currentColor;
+}
+
+/* This applies to Read Aloud text */
+/* media:active-class is defined in package.opf */
+.-epub-media-overlay-active {
+	color: inherit;
+	border-bottom: 3px solid #44f;
+}
+
+/* Layout ///////////////////////////////////////////////////////*/
+/* Images -------------------------------------------------------*/
+img.background {
+	position: absolute;
+	margin: auto;
+	z-index: -1;
+	top: 0;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.verso img.background {
+	left: 0;
+}
+
+.recto img.background {
+	right: 0;
+}
+
+/* Useful if you don’t need/want to split your images per page */
+img.background.spread {
+	width: 200%;
+}
+
+
+/* Text ---------------------------------------------------------*/
+.text {
+	/* This helps position small blocks of text */
+	position: absolute;
+	top: 120px; right: 120px; bottom: 120px; left: 120px;
+	margin: auto;
+}
+
+.text.left {
+	right: auto;
+}
+
+.text.right {
+	left: auto;
+}
+
+.text.bottom {
+	top: auto;
+}
+
+.text.top {
+	bottom: auto;
+}
+
+.text.center {
+	text-align: center;
+}
+
+/* Pages ////////////////////////////////////////////////////////*/
+h1 {
+	font-weight: 700;
+}
+
+.cover {
+	background: #44f;
+}
+
+.endpaper {
+	background: #a2a1ff;
+}
+
+.front.cover .text,
+.frontmatter.title .text {
+	bottom: 134px;
+	font-size: 60px;
+	line-height: 1.2;
+}
+
+.front.cover .text {
+	color: white;
+}
+
+.frontmatter.colophon .text {
+	max-width: 20em;
+	font-size: 18px;
+}
+
+.frontmatter.colophon .text p {
+	margin-bottom: 1.5em;
+}
+
+.back.cover .text {
+	font-size: 54px;
+	bottom: 180px;
+}
+
+.back.cover .text a {
+	color: white;
+	border-bottom: none;
+}

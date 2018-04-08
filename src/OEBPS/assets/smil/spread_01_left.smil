@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<smil xmlns="http://www.w3.org/ns/SMIL" version="3.0">
+  <body>
+    <par id="title_001">
+      <text src="../../spreads/01_left.xhtml#word_001"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+    <par id="title_002">
+      <text src="../../spreads/01_left.xhtml#word_002"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+    <par id="title_003">
+      <text src="../../spreads/01_left.xhtml#word_003"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+    <par id="title_004">
+      <text src="../../spreads/01_left.xhtml#word_004"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+    <par id="title_005">
+      <text src="../../spreads/01_left.xhtml#word_005"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+    <par id="title_006">
+      <text src="../../spreads/01_left.xhtml#word_006"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+    <par id="title_007">
+      <text src="../../spreads/01_left.xhtml#word_007"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+    <par id="title_008">
+      <text src="../../spreads/01_left.xhtml#word_008"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+    <par id="title_009">
+      <text src="../../spreads/01_left.xhtml#word_009"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+    <par id="title_010">
+      <text src="../../spreads/01_left.xhtml#word_010"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+    <par id="title_011">
+      <text src="../../spreads/01_left.xhtml#word_011"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+    <par id="title_012">
+      <text src="../../spreads/01_left.xhtml#word_012"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+    <par id="title_013">
+      <text src="../../spreads/01_left.xhtml#word_013"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+    <par id="title_014">
+      <text src="../../spreads/01_left.xhtml#word_014"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+  </body>
+</smil>

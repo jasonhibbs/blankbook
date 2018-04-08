@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>artistName</key>
-	<string>Jason Hibbs</string>
-	<key>book-info</key>
 	<dict>
-		<key>cover-image-path</key>
-		<string>OEBPS/images/book_cover.jpg</string>
-		<key>mime-type</key>
-		<string>application/epub+zip</string>
+		<key>artistName</key>
+		<string>Jason Hibbs</string>
+
+		<key>book-info</key>
+		<dict>
+			<key>cover-image-path</key>
+			<string>OEBPS/assets/images/cover_thumb.png</string>
+			<key>mime-type</key>
+			<string>application/epub+zip</string>
+		</dict>
+
+		<key>itemName</key>
+		<string>Blank Book</string>
+
+		<key>playlistName</key>
+		<string>Blank Book</string>
+
+		<key>sort-artist</key>
+		<string>Hibbs, Jason</string>
+
+		<key>genre</key>
+		<string>Demonstration</string>
+
 	</dict>
-	<key>itemName</key>
-	<string>Blank Book</string>
-	<key>playlistName</key>
-	<string>Blank Book</string>
-	<key>sort-artist</key>
-	<string>Hibbs, Jason</string>
-	<key>genre</key>
-	<string>Demonstration</string>
-</dict>
 </plist>

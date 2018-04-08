@@ -10,8 +10,8 @@ An ePub is basically a zipped up folder of stuff. The following resources should
 
 [My original 2012 blog post](http://jasonhibbs.co.uk/2012/blank-book/)
 
-[Latest proofing method](http://epubsecrets.com/new-book-proofing-tool-in-ibooks-for-osx-yosemite.php)
+[Latest proofing method (macOS)](https://support.apple.com/en-gb/HT204531)
 
-[Zip / Unzip](https://code.google.com/archive/p/epub-applescripts/downloads)
+[Zip / Unzip (macOS)](https://code.google.com/archive/p/epub-applescripts/downloads)
 
 [Validator](http://validator.idpf.org/)

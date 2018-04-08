@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<smil xmlns="http://www.w3.org/ns/SMIL" version="3.0">
+  <body>
+    <par id="title_001">
+      <text src="../../frontmatter/title.xhtml#title_001"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+    <par id="title_002">
+      <text src="../../frontmatter/title.xhtml#title_002"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+    <par id="title_003">
+      <text src="../../frontmatter/title.xhtml#title_003"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+    <par id="title_004">
+      <text src="../../frontmatter/title.xhtml#title_004"/>
+      <audio src="../audio/text.m4a" clipBegin="0.000s" clipEnd="0.000s"/>
+    </par>
+  </body>
+</smil>
